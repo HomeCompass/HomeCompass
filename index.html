@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+       
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+           <link rel="image_src" href="assets/images/social.png" / >
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="res/icon/favicon.png">
+    <link rel="icon" type="image/png" href="res/icon/favicon.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#21252b"> 
+    <link rel="alternate" href="android-app://com.homecompass.app/http/homecompass.com/web/%23/browse-link" />
+    <!--<link href="assets/vendor/font-awesome/font-awesome.min.css" rel="stylesheet" />-->
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/w3.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/vendor/remodal/remodal.css">
+    <link rel="stylesheet" href="assets/vendor/remodal/remodal-default-theme.css">
+    <link rel="stylesheet" href="assets/vendor/loader/loaders.css">
+    <link rel="stylesheet" href="assets/vendor/gallery/style.css">
+    <link rel="stylesheet" href="assets/vendor/datepicker/angular-material.min.css">
+    <link rel="stylesheet" href="assets/vendor/datepicker/md-date-range-picker.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/jssocials/jssocials.css" />
+    <link rel="stylesheet" type="text/css" href="assets/vendor/jssocials/jssocials-theme-plain.css" />  
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+    <style type="text/css">
+      .pinch-zoom {
+        overflow: visible;
+      }
+      .pinch-zoom img {
+        width: 100%;
+        height: auto;
+        -webkit-user-drag: none;
+      }
+    </style>
+    <style>
+      .remodal-wrapper {
+        padding: 0px 0px 0;
+      }
+      .remodal {
+        margin-bottom: 0px;
+      }
+    </style>
+    <!--[if IE]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <!-- dependencies -->
+    <script src="assets/js/jquery-1.9.1.min.js">
+    </script>
+    <script src="assets/js/jquery-ui.min.js">
+    </script>
+    <script src="assets/js/jquery.number.js">
+    </script>
+    <script type="text/javascript" src="assets/js/jquery.ui.touch-punch.min.js">
+    </script>
+    <script src="assets/vendor/remodal/remodal.min.js">
+    </script>
+    <script src="assets/vendor/angular/angular.min.js">
+    </script>
+    <script src="assets/vendor/angular/angular-route.js">
+    </script>
+    <script src="assets/vendor/datepicker/angular-animate.min.js">
+    </script>
+    <script src="assets/vendor/datepicker/angular-aria.min.js">
+    </script>
+    <script src="assets/vendor/datepicker/angular-messages.min.js">
+    </script>
+    <script src="assets/vendor/datepicker/angular-material.min.js">
+    </script>
+    <script src="assets/vendor/angular/currency-format.js">
+    </script>
+    <script src="assets/vendor/scrollreveal/scrollreveal.min.js">
+    </script>
+    <script src="assets/vendor/datepicker/md-date-range-picker.js">
+    </script>
+    <script src="assets/vendor/jssocials/jssocials.min.js">
+    </script>
+    <script src="assets/vendor/dom-to-image/dom-to-image.min.js">
+    </script>
+    <script src="assets/vendor/dom-to-image/svg_todataurl.js">
+    </script>
+    <script type="text/javascript" src="assets/vendor/canvg/rgbcolor.js">
+    </script> 
+    <script type="text/javascript" src="assets/vendor/canvg/StackBlur.js">
+    </script>
+    <script type="text/javascript" src="assets/vendor/canvg/canvg.js">
+    </script> 
+    <script src="assets/js/jquery-ui-slider-pips.js">
+    </script>
+    <link rel='stylesheet prefetch' href='assets/css/jquery-ui-slider-pips.css'>
+    <script src="assets/vendor/jquery-confirm/jquery-confirm.js">
+    </script>
+    <link href="assets/vendor/jquery-confirm/jquery-confirm.css" rel="stylesheet" />
+    <link rel='stylesheet prefetch' href='assets/vendor/photoswipe/photoswipe.min.css'>
+    <link rel='stylesheet prefetch' href='assets/vendor/photoswipe/default-skin.min.css'>
+    <script src='assets/vendor/photoswipe/photoswipe.min.js'>
+    </script>
+    <script src='assets/vendor/photoswipe/photoswipe-ui-default.min.js'>
+    </script>
+    <link href="assets/vendor/dropzone/css/dropzone/dropzone.css" rel="stylesheet" />
+    <script src='assets/vendor/dropzone/js/dropzone/dropzone.js'>
+    </script>
+    <!--<script src='assets/vendor/dropzone/js/dropzone/dropzone-amd-module.js'></script>
+<script src="assets/vendor/dropzone//js/dropzone/exif.js"></script>-->
+    <link rel="stylesheet" href="assets/vendor/timeslider/css/style.css">
+    <!--<link rel="stylesheet" href="assets/vendor/jquery/jquery.mobile-1.4.5.min.css" />
+<script src="assets/vendor/jquery/jquery.mobile-1.4.5.min.js"></script>-->
+    <!--<script src="assets/vendor/jquery/jquery-1.11.1.min.js"></script>-->
+    <link rel="stylesheet" href="assets/vendor/slick/slick.min.css">
+    <link rel="stylesheet" href="assets/vendor/slick/slick-theme.min.css">
+    <script src="assets/vendor/slick/slick.min.js">
+    </script>
+    <script src="assets/vendor/slick/angular-slick.js">
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8upU6En97w-IBPK2K0GeG5CtMgpP1kvQ&libraries=places">
+    </script>
+    <script>
+      var iscordova = "false";
+    </script>
+    <!-- /dependencies -->
+    <script type="text/javascript" charset="utf-8" src="cordova.js" onload="iscordova = 'true';">
+    </script>
+    <script>
+      document.addEventListener("deviceready", onDeviceReady, false);
+      document.addEventListener("offline", onOffline, false);
+      function onOffline() {
+        // Handle the offline event
+        $.alert({
+          theme: 'supervan',
+          title: "Oops",
+          content: "Internet connection has been lost. Please make sure you have data or are on WIFI to continue!"
+        }
+               );
+        navigator.app.exitApp();
+      }
+      function onDeviceReady() {
+        iscordova = "true";
+        // or device.phonegap
+        function nextFriday() {
+          var d = new Date();
+          switch (d.getDay()) {
+            case 0:
+              d.setDate(d.getDate() + 5);
+              break;
+            case 1:
+              d.setDate(d.getDate() + 4);
+              break;
+            case 2:
+              d.setDate(d.getDate() + 3);
+              break;
+            case 3:
+              d.setDate(d.getDate() + 2);
+              break;
+            case 4:
+              d.setDate(d.getDate() + 1);
+              break;
+            case 6:
+              d.setDate(d.getDate() + 6);
+              break;
+          }
+          return d;
+        }
+        var date = nextFriday();
+        cordova.plugins.notification.local.schedule({
+          id: 1,
+          theme: 'supervan',
+          title: "homecompass",
+          message: "Check out our newly listed properties this weekend.",
+          firstAt: date, // firstAt and at properties must be an IETF-compliant RFC 2822 timestamp
+          every: "week", // this also could be minutes i.e. 25 (int)
+          //sound: "sounds/reminder.mp3", 
+          icon: "https://homecompass.com/web/res/icon/logo.png"
+          //data: { meetingId:"123#fg8" }
+        }
+                                                   );
+        cordova.plugins.notification.local.on("click", function (notification) {
+          joinMeeting(notification.data.meetingId);
+        }
+                                             );
+        document.addEventListener("backbutton", onBackKeyDown, false);
+        // Now safe to use device APIs
+        cordova.plugins.locationAccuracy.canRequest(function(canRequest) {
+          if (canRequest) {
+            cordova.plugins.locationAccuracy.request(function() {
+              var gps = localStorage.getItem('homecompass_gps');
+              if (gps === 'on') {
+                localStorage.removeItem('homecompass_gps');
+              }
+              else {
+                localStorage.setItem('homecompass_gps', 'on');
+                location.reload();
+              }
+              //$.alert({
+              //    theme: 'supervan',
+              //  title: "Great!",
+              //    content: 'Request successful',
+              //});
+            }
+                                                     , function(error) {
+              navigator.app.exitApp();
+              //$.alert({
+              //    theme: 'supervan',
+              //  title: "Sorry!",
+              //    content: 'Request failed',
+              //});
+              if (error) {
+                // Android only
+                console.error("error code=" + error.code + "; error message=" + error.message);
+                if (error.code !== cordova.plugins.locationAccuracy.ERROR_USER_DISAGREED) {
+                  if (window.confirm("Failed to automatically set Location Mode to 'High Accuracy'. HomeCompass requires this. Would you like to switch to the Location Settings page and do this manually?")) {
+                    cordova.plugins.diagnostic.switchToLocationSettings();
+                  }
+                }
+              }
+            }
+                                                     , cordova.plugins.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY // iOS will ignore this
+                                                    );
+          }
+        }
+                                                   );
+        var networkState = navigator.connection.type;
+        var states = {
+        };
+        states[Connection.UNKNOWN] = 'Unknown connection';
+        states[Connection.ETHERNET] = 'Ethernet connection';
+        states[Connection.WIFI] = 'WiFi connection';
+        states[Connection.CELL_2G] = 'Cell 2G connection';
+        states[Connection.CELL_3G] = 'Cell 3G connection';
+        states[Connection.CELL_4G] = 'Cell 4G connection';
+        states[Connection.NONE] = 'No network connection';
+        if (states[networkState] == states[Connection.NONE]) {
+          // Handle the offline event
+          $.alert({
+            theme: 'supervan',
+            title: "Oops",
+            content: "Internet connection is unavailable. Please make sure you have data or are on WIFI to continue."
+          }
+                 );
+          navigator.app.exitApp();
+        }
+      }
+      function onBackKeyDown(){
+        navigator.app.backHistory();
+        return false;
+      }
+</script>
+       <title>Home Compass</title>
+    </head>
+    <body><body style="margin:0px;padding:0px;">
+    <app-root>     <div id="main" role="main" style="text-align:center;-webkit-align-self:center;">
+        <!-- Hey guys, lets build a compass in CSS3 with slight animation -->
+
+<div id="compass">
+  <span>N</span>
+  <span>E</span>
+  <span>S</span>
+  <span>W</span>
+  <div id="pointer"></div>
+</div>
+
+<!-- Finally we have a great looking compass, I hope you enjoyed it! -->
+        <canvas id="respondCanvas" class="canvas" width="600"; height="600" position: absolute; vertical-align: middle; "></canvas>
+      </div>
+      <script>$(document).ready( function(){
+    //Get the canvas &
+    context var c = $('#respondCanvas');
+    var ct = c.get(0).getContext('2d');
+    var container = $(c).parent();
+
+    //Run function when browser resizes
+    $(window).resize( respondCanvas );
+
+    function respondCanvas(){
+        c.attr('width', $(container).width() ); //max width
+        c.attr('height', $(container).height() ); //max height
+
+        //Call a function to redraw other content (texts, images etc)
+    }
+
+    //Initial call
+    respondCanvas();
+
+}); 
+</script>
+      <div>
+       <h1>Loading</h1>
+      </div>
+      <script  src="js/index.js"></script></app-root>
+        <div>
+           <iframe src="https://homecompass.epizy.com" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%">
+            </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+
+    </body>
+</html>
